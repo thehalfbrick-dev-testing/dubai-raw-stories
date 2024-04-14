@@ -96,7 +96,7 @@
 
 <body class="index-page" data-bs-spy="scroll" data-bs-target="#navmenu">
   <header id="header" class="header fixed-top d-flex">
-    <a href="#" class="logo img-fluid d-absolute mx-auto">
+    <a href="/dubai-raw-stories/#" class="logo img-fluid d-absolute mx-auto">
       <img src="assets/image/thb-raw-stories.png" alt="" loading="lazy" style="max-height: 80px; width: auto;">
     </a>
 
@@ -628,7 +628,7 @@
           <div class="col-md-4 mt-md-0 mt-0" data-aos="fade-bottom" data-aos-delay="200">
             <h5><b>Supporting Association Partner</b></h5>
             <div class="partner-box">
-              <img src="/assets/image/partners/TEPA-Logo.png" class="img-filed" width="122">
+              <img src="assets/image/partners/TEPA-Logo.png" class="img-filed" width="122">
             </div>
           </div>
 
@@ -638,7 +638,7 @@
           <div class="col-md-4 mt-5 mt-0" data-aos="fade-left" data-aos-delay="100">
             <h5><b>Outreach Partner</b></h5>
             <div class="partner-box">
-              <img src="/assets/image/partners/the-gulf-stories.png" class="img-filed" width="122">
+              <img src="assets/image/partners/the-gulf-stories.png" class="img-filed" width="122">
             </div>
           </div>
 
@@ -873,15 +873,16 @@
 
     const ctaActionBtn = document.querySelectorAll(".cta-btn");
     const ctaActionBtnLink = document.querySelectorAll(".cta-btn-link");
-    if (Category === "") {
+    if ( Category == "tepa" || Category == "speaker" || Category == "speaker"){
+      ctaActionBtnLink.forEach(e => {
+        e.setAttribute("href", `/form/?category=${Category}`)
+      });
+    }else{
       ctaActionBtn.forEach(e => {
         e.remove();
       });
-    } else {
-      ctaActionBtnLink.forEach(e => {
-        e.setAttribute("href", `/form.html?category=${Category}`)
-      });
     }
+	    
   </script>
 
 </body>
