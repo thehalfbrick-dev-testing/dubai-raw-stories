@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>TheHalfBrick™ - Dubai raw stories</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/image/logo.png" rel="icon">
+  <link href="assets/image/logo.png" rel="apple-touch-icon">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+
+  <style>
+    html {
+      max-width: 100vw;
+    }
+
+    .partner-row .partner-box {
+      width: 100% !important;
+      height: 125px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Lazy Load Styles */
+    .card-image {
+      display: block;
+      min-height: 20rem;
+      /* layout hack */
+      background: #fff center center no-repeat;
+      background-size: cover;
+      /* filter: blur(3px); */
+      /* blur the lowres image */
+    }
+
+    .card-image>img {
+      display: block;
+      width: 100%;
+    }
+
+
+    .card-list {
+      display: block;
+      margin: 1rem auto;
+      padding: 0;
+      font-size: 0;
+      text-align: center;
+      list-style: none;
+    }
+
+    .card {
+      display: inline-block;
+      width: 90%;
+      max-width: 20rem;
+      margin: 1rem;
+      font-size: 1rem;
+      text-decoration: none;
+      overflow: hidden;
+      box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
+      transition: transform 0.1s ease-in-out, box-shadow 0.1s;
+    }
+
+    .card:hover {
+      transform: translateY(-0.5rem) scale(1.0125);
+      box-shadow: 0 0.5em 3rem -1rem rgba(0, 0, 0, 0.5);
+    }
+
+    .card-description {
+      display: block;
+      padding: 1em 0.5em;
+      color: #515151;
+      text-decoration: none;
+    }
+
+    .card-description>h2 {
+      margin: 0 0 0.5em;
+    }
+
+    .card-description>p {
+      margin: 0;
+    }
+  </style>
+
+</head>
+
+<body class="index-page" data-bs-spy="scroll" data-bs-target="#navmenu">
+  <header id="header" class="header fixed-top d-flex">
+    <a href="#" class="logo img-fluid d-absolute mx-auto">
+      <img src="assets/image/thb-raw-stories.png" alt="" loading="lazy" style="max-height: 80px; width: auto;">
+    </a>
+
+
+    <div class=" flex-fill d-lg-flex d-none align-items-center justify-content-center">
+      <h1 class="title" id="spin-3"></h1>
+    </div>
+
+    <div class="btn-container ml-auto d-md-flex d-none align-items-center justify-content-center"
+      style="position: absolute; right:20px; height: 100%;">
+      <a href="#" class="cta-btn-link">
+        <button class="cta-button cta-btn" role="button"> Get Enter Pass</button>
+      </a>
+
+    </div>
+    <div class="red-progress" id="red-progress"></div>
+  </header>
+
+  <main id="main">
+
+    <section id="hero" class="hero">
+      <div class="image-bg"></div>
+      <!-- <img src="assets/image/bg/thb-logo-bg.png" alt="" data-aos="fade-in"> -->
+      <div class="white"></div>
+      <div class="container">
+        <div class="row text-end hero-text" style="height:50vh;">
+          <div class="col-md-12 mt-md-0 mt-5">
+            <h2 class="text-dark">
+              <span id="spin-1"></span><br>
+              <span id="spin-2"></span>
+            </h2>
+            <p></p>
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+
+      <a href="#" class="cta-btn-link text-white"
+        style="position: absolute; bottom: 10vh; left: 50%; transform: translateX(-50%); z-index: 3;">
+        <button class="main-cla-btn cta-btn" role="button">
+          Get Enter Pass </button> </a>
+
+      <div class="scrolldown"
+        style="width: 2em; height: 2em; background-color: transparent; z-index: 80; 
+            bottom: 25px; position: absolute; border-width: 0 0.25em 0.25em 0; border-style: solid; border-color: var(--accent-color); animation: scrolldown 1.2s ease-in-out infinite 0.15s;">
+      </div>
+      <div class="scrolldown"
+        style="width: 2em; height: 2em; background-color: transparent; z-index: 80; 
+            bottom: 40px; position: absolute; border-width: 0 0.25em 0.25em 0; border-style: solid; border-color: var(--accent-color); animation: scrolldown 1.2s ease-in-out infinite;">
+      </div>
+
+    </section>
+
+
+
+    <article id="event-details">
+      <div class="container-filed">
+        <div class="container">
+          <div class="row mt-5 align-items-center justify-content-center">
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="row align-items-center justify-content-center text-center text-md-start">
+                <div class="col-2 icon-field">
+                  <img class="icon" src="assets/image/icon/date-icon.png" alt="date icon">
+                </div>
+                <div class="col-0 col-sx-10 col-md-5 col-lg-10" data-aos="fade-top" data-aos-delay="100">26 May, 2024
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="row align-items-center justify-content-center text-center text-md-start">
+                <div class="col-2 icon-field">
+                  <img class="icon" src="assets/image/icon/time-icon.png" alt="time icon">
+                </div>
+                <div class="col-0 col-sx-10 col-md-5 col-lg-10" data-aos="fade-right" data-aos-delay="200">09.00am -
+                  06.00pm</div>
+              </div>
+            </div>
+            <div class="col-md-12 col-lg-4 mb-4 ">
+              <div class="row align-items-center justify-content-center text-center text-md-start">
+                <div class="col-2 icon-field">
+                  <img class="icon" src="assets/image/icon/place-icon.png" alt="place icon">
+                </div>
+                <div class="col-0 col-sx-10 col-md-5 col-lg-10" data-aos="fade-right" data-aos-delay="300">
+                  Starlight Ballroom <br>
+                  3 Sheikh Zayed Rd, P.O. Box 123979 <br>
+                  Dubai, United Arab Emirates
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <h1 data-aos="fade-up" data-aos-delay="100" class="text-center mb-5 mt-5">
+          We are celebrating self-made and selfless people who are growing from ground zero in all walks of life.
+        </h1>
+      </div>
+    </article>
+
+
+    <!-- speakers Section -->
+    <article id="speakers" class="speakers mt-5" data-aos="fade-up">
+
+      <!--  Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 data-aos="fade-up">30 unique speakers</h2>
+        <p data-aos="fade-up" data-aos-delay="100">Witness 1000 years of life journey in a day</p>
+      </div>
+
+      <div class="container">
+
+        <div class="row g-5 mb-4">
+
+        </div>
+        <ul class="card-list" id="speakers-row">
+
+        </ul>
+        <script>
+
+          const speakersRow = document.getElementById("speakers-row");
+          let speakersDetails = [
+            {
+              name: "Suaad Al Suwaidi",
+              location: "Abu Dhabi",
+              gender: "Female",
+              profession: "The World first's Emarati & <br>Arabic Female Wildlife Photographer",
+              imageSrc: "assets/image/speaker/Suaad-Al-Suwaidi.jpg",
+              link: "javascript:void(0)"
+            },
+            {
+              name: "Soha Chahine",
+              location: "Dubai",
+              gender: "Female",
+              profession: "Entrepreneur, Award Winning Coach,<br> Corporate Trainer, HR leader",
+              imageSrc: "assets/image/speaker/Soha-Chahine.jpg",
+              link: "javascript:void(0)"
+            },
+            {
+              name: "Faten El Ayache",
+              location: "Dubai",
+              gender: "Female",
+              profession: `Executive Coach / Coach Trainer, and Positive Psychology
+                Practitioner`,
+              imageSrc: "assets/image/speaker/Faten-El-Ayache.jpg",
+              link: "javascript:void(0)"
+            },
+            {
+              name: "Ghenwa Habbal",
+              location: "",
+              gender: "Female",
+              profession: `Regional Talent Management Lead / Manager, MENA Ford, Middle
+                East and Africa`,
+              imageSrc: "assets/image/speaker/Ghenwa-Habbal.jpg",
+              link: "javascript:void(0)"
+            },
+            {
+              name: "Anuradha Dhawan",
+              location: "Dubai",
+              gender: "Female",
+              profession: `Business Head of Fashion at the Apparel Group`,
+              imageSrc: "assets/image/speaker/Anuradha-Dhawan.jpg",
+              link: "javascript:void(0)"
+            },
+            {
+              name: "Dr. Anita Yadav",
+              location: "Dubai",
+              gender: "Female",
+              profession: `Senior Advisory, <br> New Development Bank`,
+              imageSrc: "assets/image/speaker/Dr-Anita-Yadav.png",
+              link: "javascript:void(0)"
+            },
+            {
+              name: "Jazeela Banu",
+              location: "Dubai",
+              gender: "Female",
+              profession: `Entrepreneur, Writer, and Vlogger.`,
+              imageSrc: "assets/image/speaker/Jazeela-Banu.jpg",
+              link: "javascript:void(0)"
+            },
+            {
+              name: "Ayesha Khan Sajeed Khan",
+              location: "Dubai",
+              gender: "Female",
+              profession: `Social Entrepreneur Pounder <br>of Food-ATM`,
+              imageSrc: "assets/image/speaker/Ayesha-Khan-Sajeed-Khan.png",
+              link: "javascript:void(0)"
+            },
+            {
+              name: "Vijay Pravin Maharajan",
+              location: "Germany",
+              profession: "Founder & CEO - bitsCrunch",
+              imageSrc: "assets/image/speaker/Vijay-Pravin-Maharajan.jpg",
+              link: "javascript:void(0)"
+            },
+            {
+              name: "Jason Jiang",
+              location: "Dubai",
+              profession: `CEO of Darkblue Technology L.L.C`,
+              imageSrc: "assets/image/speaker/Jason-Jiang.png",
+              link: "javascript:void(0)"
+            },
+            {
+              name: "Khwaja Saifuddin",
+              location: "Dubai",
+              profession: `Business Leader, Brand Strategist, Trusted Advisor,<br> Angel
+                Investor, Entrepreneur`,
+              imageSrc: "assets/image/speaker/Khwaja-Saifuddin.jpeg",
+              link: "javascript:void(0)"
+            },
+            {
+              name: "Dr. Karunaikumar",
+              location: "India",
+              profession: `Founder & CEO, Metamax`,
+              imageSrc: "assets/image/speaker/Dr-Karunaikumar.jpg",
+              link: "javascript:void(0)"
+            },
+            {
+              name: "Deepak Garg",
+              location: "Dubai",
+              profession: `Chief Compliance Officer and <br> MLRO at M2`,
+              imageSrc: "assets/image/speaker/Deepak-Garg.jpg",
+              link: "javascript:void(0)"
+            },
+            {
+              name: "Ramshankar C S",
+              location: "Dubai",
+              profession: `Co-Founder & CEO, Maxbyte Technologies`,
+              imageSrc: "assets/image/speaker/Ramshankar-C-S.png",
+              link: "javascript:void(0)"
+            },
+            {
+              name: "Abdul Jabbar",
+              location: "Dubai",
+              profession: `Founder, Jabbar Bhai Biryani`,
+              imageSrc: "assets/image/speaker/Abdul-Jabbar.png",
+              link: "javascript:void(0)"
+            },
+            {
+              name: "Paras Barot",
+              location: "Dubai",
+              profession: `Program Director - Regional Head of Strategic Programs - Marsh
+                McLennan. Investor`,
+              imageSrc: "assets/image/speaker/paras-barot.jpg",
+              link: "javascript:void(0)"
+            },
+          ]
+
+          speakersDetails.forEach(e => {
+            // const div = document.createElement("div");
+            // div.className = "col-lg-6 col-md-6 col-sm-6 col-xs-12 col-12 ";
+            // div.setAttribute("data-aos", "fade-up");
+            // div.setAttribute("data-aos-delay", "50");
+            //   div.innerHTML = `
+            //   <div class="card h-100 rounded-0 shadow-sm">
+            //   <div class="row g-0">
+            //     <div class="col-md-4 col-sm-5">
+            //       <img src="${e.imageSrc}" alt="${e.name}" class="img-fluid rounded-0">
+            //     </div>
+            //     <div class="col-md-8 col-sm-7">
+            //       <div class="card-body">
+            //         <h4 class="card-title mb-3" style="color:var(--accent-color);">${e.name}</h4>
+            //         <p class="card-text">${e.profession}</p>
+            //         <p class="card-text"><small class="text-muted">${e.location}</small></p>
+            //         <a href="${e.link}" class="stretched-link"></a>
+            //       </div>
+            //     </div>
+            //   </div>
+            // </div>
+
+            //   `;
+
+            const div = document.createElement("li");
+            div.className = "card";
+            div.setAttribute("data-aos", "fade-up");
+            div.setAttribute("data-aos-delay", "50");
+            div.innerHTML = `
+		<a class="card-image" href="${e.link}">
+			<img src="${e.imageSrc}" alt="${e.name}" />
+		</a>
+		<div class="card-description">
+			<h2 style="color:var(--accent-color);">${e.name}</h2>
+			<p class="card-text">${e.profession}</p>
+      <b class="mt-2">${e.location}</b>
+		</div>
+            `;
+
+            speakersRow.append(div);
+          });
+
+        </script>
+
+
+        <!-- <div class="row gy-5">
+
+          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
+            <div class="member-img">
+              <img src="assets/image/speaker/Suaad-Al-Suwaidi.jpg" class="img-fluid" alt="" loading="lazy">
+            </div>
+            <div class="member-info text-center">
+              <h4 class="primary-text" data-aos="fade-up">Suaad Al Suwaidi</h4>
+              <p data-aos="fade-up" data-aos-delay="100">The World first's Emarati & <br>Arabic Female Wildlife
+                Photographer</p>
+              <span data-aos="fade-up" data-aos-delay="200">Abu Dhabi</span>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
+            <div class="member-img">
+              <img src="assets/image/speaker/Soha-Chahine.jpg" class="img-fluid" alt="" loading="lazy">
+            </div>
+            <div class="member-info text-center">
+              <h4 class="primary-text" data-aos="fade-up">Soha Chahine</h4>
+              <p data-aos="fade-up" data-aos-delay="100">Entrepreneur, Award Winning Coach,<br> Corporate Trainer, HR
+                leader</p>
+              <span data-aos="fade-up" data-aos-delay="200">Dubai</span>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
+            <div class="member-img">
+              <img src="assets/image/speaker/Vijay-Pravin-Maharajan.jpg" class="img-fluid" alt="" loading="lazy">
+            </div>
+            <div class="member-info text-center">
+              <h4 class="primary-text" data-aos="fade-up">Vijay Pravin Maharajan </h4>
+              <p data-aos="fade-up" data-aos-delay="100">Founder & CEO - bitsCrunch</p>
+              <span data-aos="fade-up" data-aos-delay="200">Germany</span>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
+            <div class="member-img">
+              <img src="assets/image/speaker/Faten-El-Ayache.jpg" class="img-fluid" alt="" loading="lazy">
+            </div>
+            <div class="member-info text-center">
+              <h4 class="primary-text" data-aos="fade-up">Faten El Ayache</h4>
+              <p data-aos="fade-up" data-aos-delay="100">Executive Coach / Coach Trainer, and Positive Psychology
+                Practitioner</p>
+              <span data-aos="fade-up" data-aos-delay="200">Dubai</span>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
+            <div class="member-img">
+              <img src="assets/image/speaker/Ghenwa-Habbal.jpg" class="img-fluid" alt="" loading="lazy">
+            </div>
+            <div class="member-info text-center">
+              <h4 class="primary-text" data-aos="fade-up">Ghenwa Habbal</h4>
+              <p data-aos="fade-up" data-aos-delay="100">Regional Talent Management Lead / Manager, MENA Ford, Middle
+                East and Africa</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
+            <div class="member-img">
+              <img src="assets/image/speaker/Anuradha-Dhawan.jpg" class="img-fluid" alt="" loading="lazy">
+            </div>
+            <div class="member-info text-center">
+              <h4 class="primary-text" data-aos="fade-up">Anuradha Dhawan</h4>
+              <p data-aos="fade-up" data-aos-delay="100">Business Head of Fashion at the Apparel Group</p>
+              <span data-aos="fade-up" data-aos-delay="200">Dubai</span>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
+            <div class="member-img">
+              <img src="assets/image/speaker/Jason-Jiang.png" class="img-fluid" alt="" loading="lazy">
+            </div>
+            <div class="member-info text-center">
+              <h4 class="primary-text" data-aos="fade-up">Jason Jiang</h4>
+              <p data-aos="fade-up" data-aos-delay="100">CEO of Darkblue Technology L.L.C</p>
+              <span data-aos="fade-up" data-aos-delay="200">Dubai</span>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
+            <div class="member-img">
+              <img src="assets/image/speaker/Dr-Anita-Yadav.png" class="img-fluid" alt="" loading="lazy">
+            </div>
+            <div class="member-info text-center">
+              <h4 class="primary-text" data-aos="fade-up">Dr. Anita Yadav</h4>
+              <p data-aos="fade-up" data-aos-delay="100">Senior Advisory, New Development Bank</p>
+              <span data-aos="fade-up" data-aos-delay="200">Dubai</span>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
+            <div class="member-img">
+              <img src="assets/image/speaker/Ayesha-Khan-Sajeed-Khan.png" class="img-fluid" alt="" loading="lazy">
+            </div>
+            <div class="member-info text-center">
+              <h4 class="primary-text" data-aos="fade-up">Ayesha Khan Sajeed Khan</h4>
+              <p data-aos="fade-up" data-aos-delay="100">Social Entrepreneur Pounder of Food-ATM</p>
+              <span data-aos="fade-up" data-aos-delay="200">Dubai</span>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
+            <div class="member-img">
+              <img src="assets/image/speaker/Khwaja-Saifuddin.jpeg" class="img-fluid" alt="" loading="lazy">
+            </div>
+            <div class="member-info text-center">
+              <h4 class="primary-text" data-aos="fade-up">Khwaja Saifuddin</h4>
+              <p data-aos="fade-up" data-aos-delay="100">Business Leader, Brand Strategist, Trusted Advisor,<br> Angel
+                Investor, Entrepreneur</p>
+              <span data-aos="fade-up" data-aos-delay="200">Dubai</span>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
+            <div class="member-img">
+              <img src="assets/image/speaker/Dr-Karunaikumar.jpg" class="img-fluid" alt="" loading="lazy">
+            </div>
+            <div class="member-info text-center">
+              <h4 class="primary-text" data-aos="fade-up">Dr. Karunaikumar</h4>
+              <p data-aos="fade-up" data-aos-delay="100">Founder & CEO, Metamax</p>
+              <span data-aos="fade-up" data-aos-delay="200">India</span>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
+            <div class="member-img">
+              <img src="assets/image/speaker/Deepak-Garg.jpg" class="img-fluid" alt="" loading="lazy">
+            </div>
+            <div class="member-info text-center">
+              <h4 class="primary-text" data-aos="fade-up">Deepak Garg</h4>
+              <p data-aos="fade-up" data-aos-delay="100">Chief Compliance Officer and MLRO at M2</p>
+              <span data-aos="fade-up" data-aos-delay="200">Dubai</span>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
+            <div class="member-img">
+              <img src="assets/image/speaker/Veer-Shandilya.jpg" class="img-fluid" alt="" loading="lazy">
+            </div>
+            <div class="member-info text-center">
+              <h4 class="primary-text" data-aos="fade-up">Veer Shandilya</h4>
+              <p data-aos="fade-up" data-aos-delay="100">Youngest AI Data Scientist globally at 11 years</p>
+              <span data-aos="fade-up" data-aos-delay="200">Dubai</span>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
+            <div class="member-img">
+              <img src="assets/image/speaker/Ramshankar-C-S.png" class="img-fluid" alt="" loading="lazy">
+            </div>
+            <div class="member-info text-center">
+              <h4 class="primary-text" data-aos="fade-up">Ramshankar C S</h4>
+              <p data-aos="fade-up" data-aos-delay="100">Co-Founder & CEO, Maxbyte Technologies</p>
+              <span data-aos="fade-up" data-aos-delay="200">Dubai</span>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
+            <div class="member-img">
+              <img src="assets/image/speaker/Jazeela-Banu.jpg" class="img-fluid" alt="" loading="lazy">
+            </div>
+            <div class="member-info text-center">
+              <h4 class="primary-text" data-aos="fade-up">Jazeela Banu</h4>
+              <p data-aos="fade-up" data-aos-delay="100">Entrepreneur, Writer, and Vlogger.</p>
+              <span data-aos="fade-up" data-aos-delay="200">Dubai</span>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
+            <div class="member-img">
+              <img src="assets/image/speaker/Abdul-Jabbar.png" class="img-fluid" alt="" loading="lazy">
+            </div>
+            <div class="member-info text-center">
+              <h4 class="primary-text" data-aos="fade-up">Abdul Jabbar</h4>
+              <p data-aos="fade-up" data-aos-delay="100">Founder, Jabbar Bhai Biryani</p>
+              <span data-aos="fade-up" data-aos-delay="200">Dubai</span>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
+            <div class="member-img">
+              <img src="assets/image/speaker/paras-barot.jpg" class="img-fluid" alt="" loading="lazy">
+            </div>
+            <div class="member-info text-center">
+              <h4 class="primary-text" data-aos="fade-up">Paras Barot</h4>
+              <p data-aos="fade-up" data-aos-delay="100">Program Director - Regional Head of Strategic Programs - Marsh
+                McLennan. Investor</p>
+              <span data-aos="fade-up" data-aos-delay="200">Dubai</span>
+            </div>
+          </div>
+        </div> -->
+
+      </div>
+    </article>
+
+    <!-- Partner Section -->
+    <section class="partner" style="background-color: rgba(0, 0, 0, 0.027);" data-aos="fade-up">
+      <!--  Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Our Partners</h2>
+        <p>Explore Our Trusted Partnerships</p>
+      </div>
+      <div class="container">
+        <div class="partner-row row text-center">
+          <div class=" col-md-4 mt-5 mt-md-0 mt-0" data-aos="fade-left" data-aos-delay="200">
+            <h5><b>Presenting Partner</b></h5>
+            <div class="partner-box">
+              <h1></h1>
+            </div>
+          </div>
+          <div class=" col-md-4 mt-md-0 mt-0" data-aos="fade-right" data-aos-delay="100">
+            <h5><b>Technology Partner</b></h5>
+            <div class="partner-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="122" height="26" fill="none">
+                <path fill="#202020"
+                  d="m17.946 1.531-1.568.702-.578.288-1.279.578-.907.413-.908.412-1.237.619-.578.247-1.568.743-.247.124-1.815.825-.083.041-1.732.825-.413.206-1.403.62-.783.37-1.032.496v13.077l-1.114-.536L0 21.25V7.884l.701-.33 1.114-.536 1.032-.495.783-.33 1.403-.66.413-.206 1.732-.784.083-.041 1.815-.867.247-.123 1.568-.743.578-.248 1.237-.577.908-.413.907-.453L15.801.5l.577.289z">
+                </path>
+                <path fill="#202020"
+                  d="m22.236 3.512-.413.206-1.732.825-.083.041-1.815.825-.247.124-1.568.743-.578.247-1.279.578-.907.454-.908.412-1.237.578-.578.247-1.568.743-.247.124-1.815.866-.083.041-1.732.784v12.459l-.413-.207-1.403-.66V10.195l1.403-.66.413-.206 1.732-.784.083-.042 1.815-.866.247-.082 1.568-.743.578-.289 1.237-.577.908-.413.907-.412 1.28-.578.577-.289 1.568-.742.247-.124 1.815-.825.083-.041 1.732.783z">
+                </path>
+                <path fill="#202020"
+                  d="M25.454 5.038v15.058l-1.073.495-.742.33-1.403.66-.413-.206-1.732-.784 1.732-.825.413-.165 1.403-.66V6.893l-1.403.66-.413.165-1.732.825-.083.042-1.815.825-.247.124-1.568.742-.578.289-1.279.577-.907.413-.908.413-1.237.577-.578.289-1.568.742-.247.083V25.5l-1.815-.866v-12.13l1.815-.824.247-.124 1.568-.742.578-.248 1.237-.619.908-.412.907-.413 1.28-.578.577-.288 1.568-.702.247-.123 1.815-.867.083-.041 1.732-.784.413-.206 1.403-.66.742-.33z">
+                </path>
+                <path fill="#202020"
+                  d="M20.008 14.526V10.607l.083-.041 1.732-.825v8.044l-1.732.784-.083.041-1.815.867-.248.123-1.567-.742-.578-.289.578-.247 1.567-.743.248-.124 1.815-.825V14.61z">
+                </path>
+                <path fill="#202020"
+                  d="M18.193 11.432v4.002l-.247.124-1.568.742-.578.29-1.278.577-.908.412-.908-.412-1.237-.578 1.237-.619.908-.412.908-.413 1.278-.577.578-.29v-1.98l1.568-.742zM52.351 23.973H47.69l-9.9-16.378h-.124c.04.867.123 1.816.165 2.806.04.99.082 2.021.082 3.011v10.52H34.53V3.1h4.62l9.86 16.254h.083c-.041-.784-.082-1.692-.124-2.682-.041-1.031-.082-1.98-.082-2.97V3.1h3.383v20.874zM62.417 7.802c2.145 0 3.796.619 5.033 1.898 1.238 1.279 1.857 3.052 1.857 5.28v1.857H58.828c.041 1.443.454 2.557 1.197 3.341.742.784 1.815 1.197 3.176 1.197 1.031 0 1.939-.083 2.764-.29.825-.206 1.65-.494 2.517-.907v2.97c-.784.372-1.61.66-2.434.826-.826.165-1.857.247-3.012.247-1.526 0-2.929-.289-4.125-.908-1.197-.577-2.146-1.485-2.806-2.722-.66-1.197-.99-2.723-.99-4.497 0-2.723.66-4.786 2.022-6.188 1.32-1.362 3.094-2.104 5.28-2.104m0 2.723c-.99 0-1.815.33-2.434.948-.619.62-.99 1.568-1.072 2.806h6.807c0-1.073-.29-1.98-.826-2.723-.495-.66-1.36-1.031-2.475-1.031M76.031 15.888l-5.24-7.756h4.167l3.466 5.404 3.465-5.404h4.167l-5.28 7.756 5.569 8.127h-4.167l-3.713-5.776-3.713 5.776h-4.167zM102.64 8.132v15.883h-2.888l-.495-2.063h-.165a4.615 4.615 0 0 1-2.104 1.774 7.223 7.223 0 0 1-2.805.536c-1.774 0-3.177-.454-4.167-1.361-.99-.908-1.526-2.393-1.526-4.414V8.132h3.671v9.612c0 2.352.99 3.548 2.93 3.548 1.485 0 2.516-.454 3.052-1.403.537-.907.825-2.269.825-4.043V8.132zM109.24 7.018c0 .619 0 1.238-.041 1.815a26.076 26.076 0 0 1-.124 1.361h.165c.413-.66 1.032-1.237 1.774-1.69.743-.455 1.692-.702 2.888-.702 1.815 0 3.342.701 4.456 2.063 1.155 1.402 1.732 3.424 1.732 6.105 0 2.723-.577 4.786-1.732 6.188-1.155 1.403-2.682 2.063-4.538 2.063-1.197 0-2.146-.206-2.847-.66a6.12 6.12 0 0 1-1.733-1.485h-.247l-.66 1.856h-2.764V1.737h3.671zm3.59 3.795c-1.321 0-2.269.413-2.764 1.197-.537.784-.784 2.021-.826 3.671v.33c0 1.692.248 3.012.784 3.878.537.908 1.485 1.362 2.888 1.362 1.073 0 1.939-.454 2.517-1.362.577-.907.866-2.227.866-3.919 0-1.732-.289-3.053-.908-3.878-.577-.866-1.444-1.279-2.557-1.279">
+                </path>
+              </svg>
+            </div>
+          </div>
+          <div class="col-md-4 mt-md-0 mt-0" data-aos="fade-bottom" data-aos-delay="200">
+            <h5><b>Supporting Association Partner</b></h5>
+            <div class="partner-box">
+              <img src="/assets/image/partners/TEPA-Logo.png" class="img-filed" width="122">
+            </div>
+          </div>
+
+        </div>
+
+        <div class="partner-row row text-center bg-light">
+          <div class="col-md-4 mt-5 mt-0" data-aos="fade-left" data-aos-delay="100">
+            <h5><b>Outreach Partner</b></h5>
+            <div class="partner-box">
+              <img src="/assets/image/partners/the-gulf-stories.png" class="img-filed" width="122">
+            </div>
+          </div>
+
+          <div class="col-md-4 mt-5 mt-0" data-aos="fade-right" data-aos-delay="300">
+            <h5><b>Event tech Partnerr</b></h5>
+            <div class="partner-box">
+              <div style="width:122px;">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" x="122" y="0px" viewBox="0 0 215.5 69.2"
+                  style="background:new 0 0 215.5 69.2" xml:space="preserve">
+                  <style type="text/css">
+                    .st0 {
+                      display: none;
+                    }
+
+                    .st1 {
+                      fill: #FC4259;
+                    }
+
+                    .st2 {
+                      fill: #F82647;
+                    }
+
+                    .st3 {
+                      fill: black;
+                    }
+
+                    .st4 {
+                      fill: #black;
+                    }
+
+                    .st5 {
+                      fill: url(#SVGID_1_);
+                    }
+
+                    .st6 {
+                      fill: url(#SVGID_2_);
+                    }
+
+                    .st7 {
+                      fill: url(#SVGID_3_);
+                    }
+
+                    .st8 {
+                      fill: url(#SVGID_4_);
+                    }
+                  </style>
+                  <g>
+                    <g class="st3">
+                      <path style="color:black"
+                        d="M27.2,61.5v3.4c-2,0.9-4.5,1.3-7.3,1.3c-4.9,0-8.2-3.4-8.2-8.4V38.7H6.4v-3.4h5.3v-8.9h4.1v8.9h11v3.4h-11V57    c0,3.3,2.2,5.6,5.3,5.6C23.2,62.6,25.3,62.2,27.2,61.5z">
+                      </path>
+                      <path style="color:black"
+                        d="M31.9,24.8c0-1.6,1.2-2.8,2.8-2.8c1.5,0,2.8,1.2,2.8,2.8c0,1.5-1.2,2.8-2.8,2.8    C33.1,27.6,31.9,26.4,31.9,24.8z M32.7,35.2h4.1v30.4h-4.1V35.2z">
+                      </path>
+                      <path style="color:black"
+                        d="M44.2,50.4c0-9.4,6.3-15.7,15.6-15.7c3.9,0,7.1,1.1,9.8,3.3l-2.4,2.9c-2.2-1.8-4.5-2.6-7.5-2.6    c-6.8,0-11.2,4.8-11.2,12.2c0,7.3,4.5,12.2,11.3,12.2c3.2,0,6.1-1.1,8.3-3.3l2.4,2.8c-2.8,2.6-6.6,4-11,4    C50.4,66.1,44.2,59.8,44.2,50.4z">
+                      </path>
+                      <path style="color:black"
+                        d="M87.3,51.3h-6.1v14.2h-4.1V20.8h4.1v27.1h6.1l11.6-12.7h5.2L90.7,49.6l14.1,16h-5.3L87.3,51.3z">
+                      </path>
+                      <path style="color:black"
+                        d="M135,51.9h-24.2c0.5,6.6,4.1,10.9,10.1,10.9c4.1,0,7.5-2,9.8-5.2l3.2,1.8c-2.9,4.4-7.6,6.7-13,6.7    c-8.7,0-14.5-6.3-14.5-15.8c0-9.4,5.7-15.7,14.4-15.7c8.5,0,14.3,6.1,14.3,15.4C135.1,50.5,135.1,51.4,135,51.9z M110.8,49h20    c-0.3-6.8-4.1-11-10-11S111.2,42.2,110.8,49z">
+                      </path>
+                      <path style="color:black"
+                        d="M158.9,61.5v3.4c-2,0.9-4.5,1.3-7.3,1.3c-4.9,0-8.2-3.4-8.2-8.4V38.7h-5.3v-3.4h5.3v-8.9h4.1v8.9h11v3.4h-11    V57c0,3.3,2.2,5.6,5.3,5.6C155,62.6,157,62.2,158.9,61.5z">
+                      </path>
+                    </g>
+                    <g>
+                      <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="175.829" y1="85.0666"
+                        x2="201.4576" y2="-33.7324" gradientTransform="matrix(1 0 0 1 0 -6)">
+                        <stop offset="4.972039e-02" style="stop-color:#FDA228"></stop>
+                        <stop offset="0.4385" style="stop-color:#FD394B"></stop>
+                        <stop offset="0.623" style="stop-color:#F82647"></stop>
+                        <stop offset="0.8151" style="stop-color:#F41945"></stop>
+                        <stop offset="1" style="stop-color:#F31544"></stop>
+                      </linearGradient>
+                      <path class="st5"
+                        d="M206.7,14.5c-5.1-9.8-17-14.1-27.3-9.9c-11.5,4.8-16.4,18.1-11,29.1c0.2,0.4,0.4,0.8,0.6,1.1l2.6,5.5    c1,1.9,2.9,3.2,5.1,3.2h14.6c1.1,0,1.7,1.1,1.2,2l-1,2c-0.1,0-0.1,0-0.2,0c-1.1,0-2.2,1-2.3,2.1c0,0.4,0.1,0.9,0.3,1.1    c0.3,0.4,0.3,0.9,0.1,1.3l-0.8,1.7c-0.3,0.5-0.7,0.8-1.2,0.8h-6.7c-1.1,0-1.8,1.1-1.2,2l3,6.2c1.7,3.5,6.7,3.6,8.6,0.2l14.5-27    C209.7,29.7,210.4,21.6,206.7,14.5z M187.5,34.2c-5.7,0-10.4-4.7-10.4-10.4s4.7-10.4,10.4-10.4c5.7,0,10.4,4.7,10.4,10.4    S193.3,34.2,187.5,34.2z">
+                      </path>
+                    </g>
+                    <g>
+                      <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="176.4774" y1="85.2064"
+                        x2="202.1059" y2="-33.5926" gradientTransform="matrix(1 0 0 1 0 -6)">
+                        <stop offset="4.972039e-02" style="stop-color:#FDA228"></stop>
+                        <stop offset="0.4385" style="stop-color:#FD394B"></stop>
+                        <stop offset="0.5356" style="stop-color:#FE2857"></stop>
+                        <stop offset="0.694" style="stop-color:#FE1465"></stop>
+                        <stop offset="0.8501" style="stop-color:#FF076E"></stop>
+                        <stop offset="1" style="stop-color:#FF0371"></stop>
+                      </linearGradient>
+                      <path class="st6"
+                        d="M181.7,52.6l0.5,0.3c0.2,0.1,0.4,0,0.4-0.1l0.6-1.2c0.1-0.2,0-0.4-0.1-0.4l-0.5-0.3c-0.2-0.1-0.4,0-0.4,0.1    l-0.6,1.2C181.4,52.3,181.5,52.5,181.7,52.6z">
+                      </path>
+                      <linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="178.1123" y1="85.5592"
+                        x2="203.7409" y2="-33.2398" gradientTransform="matrix(1 0 0 1 0 -6)">
+                        <stop offset="4.972039e-02" style="stop-color:#FDA228"></stop>
+                        <stop offset="0.4385" style="stop-color:#FD394B"></stop>
+                        <stop offset="0.5356" style="stop-color:#FE2857"></stop>
+                        <stop offset="0.694" style="stop-color:#FE1465"></stop>
+                        <stop offset="0.8501" style="stop-color:#FF076E"></stop>
+                        <stop offset="1" style="stop-color:#FF0371"></stop>
+                      </linearGradient>
+                      <path class="st7"
+                        d="M184.7,46.5l0.5,0.3c0.2,0.1,0.4,0,0.4-0.1l0.6-1.2c0.1-0.2,0-0.4-0.1-0.4l-0.5-0.3c-0.2-0.1-0.4,0-0.4,0.1    l-0.6,1.2C184.5,46.3,184.5,46.5,184.7,46.5z">
+                      </path>
+                      <linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="177.3105" y1="85.3862"
+                        x2="202.939" y2="-33.4128" gradientTransform="matrix(1 0 0 1 0 -6)">
+                        <stop offset="4.972039e-02" style="stop-color:#FDA228"></stop>
+                        <stop offset="0.4385" style="stop-color:#FD394B"></stop>
+                        <stop offset="0.5356" style="stop-color:#FE2857"></stop>
+                        <stop offset="0.694" style="stop-color:#FE1465"></stop>
+                        <stop offset="0.8501" style="stop-color:#FF076E"></stop>
+                        <stop offset="1" style="stop-color:#FF0371"></stop>
+                      </linearGradient>
+                      <path class="st8"
+                        d="M183.2,49.6l0.5,0.3c0.2,0.1,0.4,0,0.4-0.1l0.6-1.2c0.1-0.2,0-0.4-0.1-0.4l-0.5-0.3c-0.2-0.1-0.4,0-0.4,0.1    l-0.6,1.2C183,49.3,183,49.5,183.2,49.6z">
+                      </path>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mt-5 mt-0" data-aos="fade-left" data-aos-delay="300">
+            <h5><b>Design Partner</b></h5>
+            <div class="partner-box">
+              <img src="/assets/image/partners/Ideate9-Logo.webp" class="img-filed" width="122">
+            </div>
+          </div>
+        </div>
+
+        <div class="partner-row row text-center bg-light">
+          <div class="col-md-4 mt-5 mt-0" data-aos="fade-left" data-aos-delay="100">
+            <h5><b>Legal Partner</b></h5>
+            <div class="partner-box">
+              <!-- <img src="/assets/image/partners/the-gulf-stories.png" class="img-filed" width="122"> -->
+            </div>
+          </div>
+          <div class="col-md-4 mt-5 mt-0" data-aos="fade-bottom" data-aos-delay="200">
+            <h5><b>Fulfilment Partner</b></h5>
+            <div class="partner-box">
+              <!-- <img src="/assets/image/partners/the-gulf-stories.png" class="img-filed" width="122"> -->
+            </div>
+          </div>
+          <div class="col-md-4 mt-5 mt-0" data-aos="fade-left" data-aos-delay="300">
+            <h5><b>Venue Partner</b></h5>
+            <div class="partner-box">
+              <!-- <img src="/assets/image/partners/Ideate9-Logo.webp" class="img-filed" width="122"> -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- About Section -->
+    <article id="about" class="about" data-aos="fade-up">
+      <div class="container">
+        <div class="container section-title mt-5" data-aos="fade-up">
+          <h2 class="mt-5 font-weight-bold" data-aos="fade-up">About Us</h2>
+          <p class="font-italic" data-aos="fade-up">The Half Brick is a Global Community</p>
+        </div>
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row align-items-xl-center gy-5">
+            <div class="col-xl-12 content" data-aos="fade-up" data-aos-delay="100">
+              <p class="card-text font-weight-bold mt-2" style="font-size: 18px;" data-aos="fade-up" data-aos-delay="100">Founded in 2021,<br><br>
+                Section 8 Non-Profit Organization<br><br> <span class="primary-text">TheHalfBrick™</span> have created an
+                inclusive people’s platform named as raw stories to inspire our younger generation in the form of
+                storytelling, to recognize and celebrate the life journey of the self-made and selfless people who are
+                growing from ground zero from all walks of life around the world. Our motto is to create “self-dependent
+                younger generations” to achieve that we are going to upskill and cross skill our Unemployed Graduates,
+                Graduates, students, College dropouts, school dropouts and working professionals. </p>
+            </div>
+          </div>
+        </div>
+        <div class="container mt-5" data-aos="fade-up" data-aos-delay="200">
+          <div class="row align-items-xl-center gy-5">
+            <div class="col-xl-12" data-aos="fade-up" data-aos-delay="200">
+              <h2 class="mt-2 primary-text font-weight-bold" data-aos="fade-up" data-aos-delay="200">Dubai Raw Stories
+              </h2>
+              <p class="card-text" style="font-size: 18px;text-align: justify;" data-aos="fade-up" data-aos-delay="200">We are celebrating the life journey of the self-made
+                and selfless People who are growing from ground zero from all walks of life around the world. Speakers
+                will share their life journey particularly they will talk about their setbacks and how did they overcome
+                from those situations. Let us join hands together to celebrate the real meaning of success. <br><br>
+                <b>Event Date:</b> 26 May, 2024<br> <b>Event Venue:</b> SHERATON GRAND, Dubai, UAE.<br> </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!--Footer img Section  -->
+    <article id="img-section" class="img-section">
+      <div class="container-filed">
+        <img src="assets/image/Dubai-1.png">
+      </div>
+    </article>
+  </main>
+
+
+  <!-- Scroll Top Button -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!--  Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const Category = urlParams.get("category") || "";
+
+    function updateScrollValues() {
+      const progressBar = document.getElementById("red-progress");
+      var totalPageLength = document.body.scrollHeight;
+      var scrollingHeight = window.scrollY;
+      var maxScrollingHeight = totalPageLength - window.innerHeight;
+      let percentage = (scrollingHeight / maxScrollingHeight) * 100;
+      progressBar.style.width = percentage + "%";
+    }
+
+    updateScrollValues();
+
+    window.addEventListener('scroll', updateScrollValues);
+
+    const ctaActionBtn = document.querySelectorAll(".cta-btn");
+    const ctaActionBtnLink = document.querySelectorAll(".cta-btn-link");
+    if (Category === "") {
+      ctaActionBtn.forEach(e => {
+        e.remove();
+      });
+    } else {
+      ctaActionBtnLink.forEach(e => {
+        e.setAttribute("href", `/form.html?category=${Category}`)
+      });
+    }
+  </script>
+
+</body>
+
+</html>
