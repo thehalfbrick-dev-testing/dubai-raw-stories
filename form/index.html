@@ -31,7 +31,7 @@
             padding: 0;
         }
 
-        
+
         .center-box-bg {
             position: fixed;
             width: 100vw;
@@ -406,7 +406,7 @@
                             <div class="col-12 col-sm-6 col-md-6 col-lg-4">
                                 <div class="form-group">
                                     <label for="mobile">Mobile number<span class="highlight"> *</span></label>
-                                    <input type="number" id="mobile" name="mobile" class="form-control"
+                                    <input type="text" id="mobile" name="mobile" class="form-control"
                                         placeholder="Enter Your Mobile No." required>
                                 </div>
                             </div>
@@ -516,7 +516,8 @@
                 </div>
                 <div class="modal-body">
                     <div class="astronaut-bg">
-                        <h5 class="">Speakers are entitled to complimentary entry, including one additional ticket. Any
+                        <h5 class="" id="message">Speakers are entitled to complimentary entry, including one additional
+                            ticket. Any
                             additional tickets beyond this allocation are available for purchase at 300
                             Dirhams per ticket.</h5>
 
@@ -542,13 +543,49 @@
     let getInputData;
     let isAlreadySpeaker;
     let isAlreadyPartner;
+    let isAlreadyTepa;
     let isOkay = false;
 
-    const iDs = ["normal-name-div", "speakers-name-div", "for-tepa", "partner-category-div", "partner-brand-name-div", "partner-industry-type-name-div", "partner-Designation-Role-div", "partner-category", "speakers-name", "no-of-pass-div", "no-of-pass", "no-of-pass-msg", "email", "mobile", "gender", "age-group", "linkedin", "Facebook", "Instagram", "myForm", "loader", "form-rows", "register", "model", "isOkay"];
+    const iDs = ["normal-name-div", "speakers-name-div", "for-tepa", "partner-category-div", "partner-brand-name-div", "partner-industry-type-name-div", "partner-Designation-Role-div", "partner-category", "speakers-name", "no-of-pass-div", "no-of-pass", "no-of-pass-msg", "email", "mobile", "gender", "age-group", "linkedin", "Facebook", "Instagram", "myForm", "loader", "form-rows", "register", "model", "isOkay", "message"];
     var Elements = {};
     iDs.forEach(id => {
         Elements[id] = document.getElementById(id);
     });
+
+
+    const forTepaCheckRegistration = async () => {
+        if (Category === "tepa") {
+            try {
+                const response = await fetch(`https://script.google.com/macros/s/AKfycby674cibbxbyROF_CEailVE-4KwC6HJY7bqAHJZXsSPFOZ8UMCXgVKKMhP-rxHNfYo-/exec?getDataCountByName=tepa`);
+                const responseData = await response.json();
+
+                if (responseData.result === "success" && responseData.dataCount == 30) {
+
+                    Elements["register"].textContent = "Closed";
+                    Elements["register"].disabled = true;
+                    if (!isOkay) {
+                        Elements["message"].textContent = "Attention Tepa members! The Tepa Free Pass offer has reached its maximum capacity of 30 members. We regret to inform you that the free pass option is now closed. ";
+                        Elements["model"].style.display = "flex";
+                        Elements["isOkay"].addEventListener("click", () => (Elements["model"].style.display = "none"), isOkay = 1);
+                    }
+                    return true;
+                }
+            } catch (error) {
+                console.error("Error fetching data:", error);
+                new Notify({
+                    status: "error",
+                    title: error === "TypeError: Failed to fetch" ? "Check Your Internet" : error,
+                    text: "",
+                    autoclose: true,
+                    autotimeout: 3000,
+                    effect: "slide",
+                    speed: 300,
+                    position: "right bottom"
+                });
+            }
+        }
+    }
+
 
     if (Category !== "") {
         if (Category === "speaker") {
@@ -570,9 +607,11 @@
             Elements["partner-industry-type-name-div"].style.display = "block";
             Elements["partner-Designation-Role-div"].style.display = "block";
             getInputData = "pc";
+            console.log(getInputData);
             Elements["no-of-pass"].max = 1;
             Elements["speakers-name-div"].remove();
             Elements["for-tepa"].remove();
+            Elements["partner-category"].addEventListener("change", e => { addEventsForPartnerName(e) });
             Elements["no-of-pass-msg"].textContent = "Specify one additional guest (excluding yourself) who will receive free entry.";
         } else if (Category === "tepa") {
             Elements["no-of-pass-div"].remove();
@@ -582,17 +621,20 @@
             Elements["partner-brand-name-div"].remove();
             Elements["partner-industry-type-name-div"].remove();
             Elements["partner-Designation-Role-div"].remove();
+            forTepaCheckRegistration();
+            Elements["email"].addEventListener("change", e => { checkTepaEmail(e) });
+            Elements["email"].addEventListener("input", e => { checkTepaEmail(e) });
+
         }
 
         Elements["no-of-pass"].addEventListener("input", (e) => {
             const value = parseInt(e.target.value);
-            // console.log(value , RowsCount);
             if (isNaN(value)) {
                 e.target.value = 0;
             } else if (value < 1) {
                 e.target.value = 0;
-            } else if (getInputData === "spn" && value > 3) {
-                e.target.value = 3;
+            } else if (getInputData === "spn" && value > 10) {
+                e.target.value = 10;
             } else if (getInputData === "pc" && value > 1) {
                 e.target.value = 1;
             }
@@ -614,6 +656,7 @@
         Elements["partner-Designation-Role-div"].remove();
     }
 
+   
     async function addEventsForSpeakersName(e) {
         fetch(`https://script.google.com/macros/s/AKfycby674cibbxbyROF_CEailVE-4KwC6HJY7bqAHJZXsSPFOZ8UMCXgVKKMhP-rxHNfYo-/exec?isverify=true&verifyKey=name&verifyValue=${e.target.value}&verifyCategory=speaker&verifyToGet=email`)
             .then(response => response.json())
@@ -646,6 +689,47 @@
                         email: "",
                         isAlreadyRun: false
                     }
+                    Elements["register"].innerHTML = 'Register <div id="loader" style="display: none;"></div>';
+                    Elements.register.disabled = false;
+                }
+            })
+            .catch(error => console.error("Error fetching data:", error));
+    }
+
+    async function addEventsForPartnerName(e) {
+        fetch(`https://script.google.com/macros/s/AKfycby674cibbxbyROF_CEailVE-4KwC6HJY7bqAHJZXsSPFOZ8UMCXgVKKMhP-rxHNfYo-/exec?isverify=true&verifyKey=category&verifyValue=${e.target.value}&verifyCategory=partner&verifyToGet=email`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.result == "success") {
+                    isAlreadyPartner = {
+                        ok: true,
+                        email: data.returnData ? "" : data.returnData,
+                        isAlreadyRun: false
+                    }
+
+                    new Notify({
+                        status: "success",
+                        title: "Already Registered",
+                        text: "",
+                        autoclose: !0,
+                        autotimeout: 3e3,
+                        effect: "slide",
+                        speed: 300,
+                        position: "right bottom"
+                    })
+
+                    Elements["register"].textContent = "Already Registered";
+                    Elements.register.disabled = true;
+                    Elements["email"].addEventListener("change", e => { checkPartnerEmail(e) });
+                    Elements["email"].addEventListener("input", e => { checkPartnerEmail(e) });
+                } else {
+                    isAlreadyPartner = {
+                        ok: false,
+                        email: "",
+                        isAlreadyRun: false
+                    }
+                    Elements["register"].innerHTML = 'Register <div id="loader" style="display: none;"></div>';
+                    Elements.register.disabled = false;
                 }
             })
             .catch(error => console.error("Error fetching data:", error));
@@ -684,6 +768,61 @@
             // Elements.register.disabled = false;
             // isAlreadySpeaker["isAlreadyRun"] = true;
         }
+    }
+
+    async function checkPartnerEmail(e) {
+        if (isAlreadyPartner.ok) {
+            if (e.target.value !== isAlreadyPartner.email || isAlreadyPartner["isAlreadyRun"]) {
+                return false
+            }
+
+            new Notify({
+                status: "success",
+                title: "Email is Matched",
+                text: isAlreadyPartner.email,
+                autoclose: !0,
+                autotimeout: 3e3,
+                effect: "slide",
+                speed: 300,
+                position: "right bottom"
+            })
+
+            fetch(`https://script.google.com/macros/s/AKfycby674cibbxbyROF_CEailVE-4KwC6HJY7bqAHJZXsSPFOZ8UMCXgVKKMhP-rxHNfYo-/exec?isverify=true&verifyKey=email&verifyValue=${e.target.value}&verifyCategory=partner&verifyToGet=id`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.result == "success") {
+                        console.log(data.returnData);
+                    }
+                })
+                .catch(error => console.error("Error fetching data:", error));
+        }
+    }
+
+    async function checkTepaEmail(e) {
+
+        fetch(`https://script.google.com/macros/s/AKfycby674cibbxbyROF_CEailVE-4KwC6HJY7bqAHJZXsSPFOZ8UMCXgVKKMhP-rxHNfYo-/exec?isverify=true&verifyKey=email&verifyValue=${e.target.value}&verifyCategory=tepa&verifyToGet=id`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.result == "success") {
+                    new Notify({
+                        status: "success",
+                        title: "Already Registered",
+                        text: "",
+                        autoclose: !0,
+                        autotimeout: 3e3,
+                        effect: "slide",
+                        speed: 300,
+                        position: "right bottom"
+                    })
+                    Elements["register"].textContent = "Already Registered";
+                    Elements.register.disabled = true;
+                } else {
+                    Elements["register"].innerHTML = 'Register <div id="loader" style="display: none;"></div>';
+                    Elements.register.disabled = false;
+                }
+            })
+            .catch(error => console.error("Error fetching data:", error));
+
     }
 
     async function addFormRows(e) {
@@ -817,7 +956,7 @@
         const formData = new FormData(Elements["myForm"]);
         const data = Object.fromEntries(formData.entries());
 
-        if (`${data["mobile"]}`.length < 9) {
+        if (`${data["mobile"]}` == "") {
             loader.style.display = "none";
             return new Notify({
                 status: "warning",
